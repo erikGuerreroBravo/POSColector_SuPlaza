@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
+  <!--Project was exported from assembly: D:\Respaldo Su_Plaza_Actopan\PosColector\POSColector.exe-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4DA6CAC4-C5DC-4A88-8238-B18BC18A4A12}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>POSColector</AssemblyName>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <RootNamespace>POSColector</RootNamespace>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SqlServerCe" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="POSDataCacheClientSyncProvider.cs" />
+    <Compile Include="POSDataCacheSyncAgent.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="ViewForms\InventoryForm.cs" />
+    <Compile Include="ViewForms\ShowPurchasesForm.cs" />
+    <Compile Include="ViewForms\ShowInventoryForm.cs" />
+    <Compile Include="ViewForms\MainForm.cs" />
+    <Compile Include="ViewForms\PurchasesFreeForm.cs" />
+    <Compile Include="ViewForms\GetDateForm.cs" />
+    <Compile Include="ViewForms\SecureForm.cs" />
+    <Compile Include="ViewForms\PurchasesForm.cs" />
+    <Compile Include="DAO\pos_colector.cs" />
+    <Compile Include="DAO\unidad_medidaDAO.cs" />
+    <Compile Include="DAO\compra_articuloDAO.cs" />
+    <Compile Include="DAO\pedido_articuloDAO.cs" />
+    <Compile Include="DAO\compraDAO.cs" />
+    <Compile Include="DAO\pedidoDAO.cs" />
+    <Compile Include="DAO\inventarioDAO.cs" />
+    <Compile Include="DAO\usuarioDAO.cs" />
+    <Compile Include="DAO\SynchronizerDAO.cs" />
+    <Compile Include="DAO\articuloDAO.cs" />
+    <Compile Include="DAO\proveedorDAO.cs" />
+    <Compile Include="Entities\pedido_articulo.cs" />
+    <Compile Include="Entities\proveedor.cs" />
+    <Compile Include="Entities\inventario.cs" />
+    <Compile Include="Entities\unidad_medida.cs" />
+    <Compile Include="Entities\compra.cs" />
+    <Compile Include="Entities\articulo.cs" />
+    <Compile Include="Entities\inventario_articulo.cs" />
+    <Compile Include="Entities\pedido.cs" />
+    <Compile Include="Entities\order_detail.cs" />
+    <Compile Include="Entities\unidad_articulo.cs" />
+    <Compile Include="Entities\compra_articulo.cs" />
+    <Compile Include="Properties\Resources.cs" />
+    <Compile Include="suplazaserver\SyncCatalogos.cs" />
+    <Compile Include="suplazaserver\unidad_medida.cs" />
+    <Compile Include="suplazaserver\compra_articulo.cs" />
+    <Compile Include="suplazaserver\compra.cs" />
+    <Compile Include="suplazaserver\inventario_captura.cs" />
+    <Compile Include="suplazaserver\inventario_fisico.cs" />
+    <Compile Include="suplazaserver\pedido_articulo.cs" />
+    <Compile Include="suplazaserver\pedido.cs" />
+    <Compile Include="suplazaserver\usuario_permiso.cs" />
+    <Compile Include="suplazaserver\usuario.cs" />
+    <Compile Include="suplazaserver\articulo.cs" />
+    <Compile Include="suplazaserver\proveedor.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx" />
+    <EmbeddedResource Include="ViewForms\GetDateForm.resx" />
+    <EmbeddedResource Include="ViewForms\InventoryForm.resx" />
+    <EmbeddedResource Include="ViewForms\MainForm.resx" />
+    <EmbeddedResource Include="ViewForms\PurchasesForm.resx" />
+    <EmbeddedResource Include="ViewForms\PurchasesFreeForm.resx" />
+    <EmbeddedResource Include="ViewForms\SecureForm.resx" />
+    <EmbeddedResource Include="ViewForms\ShowInventoryForm.resx" />
+    <EmbeddedResource Include="ViewForms\ShowPurchasesForm.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
